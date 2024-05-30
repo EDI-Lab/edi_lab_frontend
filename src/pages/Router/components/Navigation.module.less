@@ -1,164 +1,184 @@
-ul.menu{
-    user-select: none;
+body{
+    overflow-x: clip;
+    margin: 0;
 }
-ul.expand_menu{
+div.navigation {
+    position: sticky;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    border-bottom: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 600;
     user-select: none;
-}
-
-@media screen and (max-width: 600px) {
-
-    div.navigation {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5vh;
-        box-shadow: gray 1px 1px 2px;
+    h1.title {
+        font-size: 4vh;
+        font-weight: bold;
+        margin-left: 1em;
+        transition: all 0.25s ease-in-out;
+        color: darkgray;
+        text-shadow: gray 1px 1px 1px;
+        font-family: "Microsoft JhengHei UI",sans-serif;
+        &:hover {
+            cursor: pointer;
+            text-shadow: #4e97f3 1px 1px 5px;
+            transform: scale(1.01);
+        }
+    }
+    ul.menu {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-
-        border: 1px black solid;
-
-    }
-    button{
-        height: 40px;
-        width: 40px;
-
-        display: block;
-        border-radius: 5px;
-    }
-    button.expand_menu {
-
-        height: 40px;
-        width: 40px;
-        font-size: 20px;
-        display: block;
-        font-weight: 600;
-    }
-
-    button.search {
-        height: 40px;
-        width: 40px;
-        background: #8698ff;
-        display: block;
-    }
-
-    ul.menu {
-        display: none;
-    }
-
-    ul {
-        margin: 0;
-    }
-
-    ul.expand_menu {
-        z-index: 300;
-        position: relative;
-        left: 0;
-        width: 99%;
-        margin-left: 0;
-        box-shadow: gray 1px 1px 2px;
-        li {
-            padding-left: 0;
-            height: 5%;
-
-            z-index: 300;
+        justify-content: flex-start;
+        li{
             margin: 20px;
-            font-weight: 400;
-            font-size: 20px;
-            transition: all 0.25s ease-in-out;
-        }
 
+            font-size: 2.5vh;
+            transition: all 0.25s ease-in-out;
+            list-style: none;
+            font-family: "Microsoft JhengHei UI",sans-serif;
+            font-weight: 600;
+
+        }
         li:hover {
             cursor: pointer;
-            text-shadow: #8698ff 1px 1px 10px;
+            text-shadow: #8698ff 1px 1px 5px;
             transform: scale(1.01);
 
         }
-
-        li.button {
-            list-style: none;
+        li.sub_menu div{
+            display: none;
+        }
+        li.sub_menu:hover div{
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rebeccapurple;
         }
     }
 }
-
-@media screen and (min-width: 600px) {
-    ul.expand_menu {
-        display: none;
-        user-select: none;
-    }
-
-    ul {
-        margin: 0;
-    }
-
-    div.navigation {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5vh;
-        box-shadow: gray 1px 1px 2px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 600;
-
-        button.expand_menu {
-            display: none;
-        }
-
-        button.search {
-            display: none;
-        }
-
-        h1.title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-left: 1em;
-            color: #000000;
-            transition: all 0.25s ease-in-out;
-
-            &:hover {
-                cursor: pointer;
-                text-shadow: #4e97f3 1px 1px 10px;
-                transform: scale(1.01);
-            }
-        }
-
-        ul.menu {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-
-            li {
-                margin: 20px;
-                font-weight: 400;
-                font-size: 20px;
-                transition: all 0.25s ease-in-out;
-            }
-
-            li:hover {
-                cursor: pointer;
-                text-shadow: #8698ff 1px 1px 10px;
-                transform: scale(1.01);
-
-            }
-
-            li.button {
-                list-style: none;
-            }
-        }
-    }
-}
-
 div.margin {
     margin: 0;
     width: 100%;
     height: 5vh;
+}
+div.navigation_mobile{
+    position: sticky;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    border-bottom: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 600;
+    user-select: none;
+    h1{
+        position: absolute;
+        font-size: 4vh;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        pointer-events: none;
+        color: darkgray;
+        text-shadow: gray 1px 1px 1px;
+    }
+    @media(max-width: 250px){
+        h1{
+            font-size: 2vh;
+        }
+    }
+    img.expand_menu{
+        width: 4vh;
+        height: 4vh;
+        transition: 0.2s all ease-in-out;
+        position: relative;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
 
+}
+div.expand_menu_content_closed{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
 
+div.expand_menu_content{
+
+    height: fit-content;
+    position: absolute;
+    top: 5vh;
+    background: white;
+    padding-bottom: 5px;
+    width: 100%;
+    border: gray 2px solid;
+    margin: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 0 0 15px 15px;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 20px;
+        font-family: "Microsoft JhengHei UI",sans-serif;
+        font-weight: 600;
+        div.split{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 0;
+            //border-bottom: 2px gray solid;
+        }
+        div.split_line{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 0;
+            border-bottom: 2px gray solid;
+        }
+        li.button{
+            list-style: none;
+            font-size: 1.5em;
+            transition: 0.2s all ease-in-out;
+            width: fit-content;
+            height: 4vh;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+            border-radius: 5px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:first-child{
+                margin-top: 5px;
+            }
+        }
+        li.sub_menu div{
+            display: none;
+        }
+        li.sub_menu:hover div{
+            display: block;
+            width: 100%;
+            height: 30px;
+            background: aqua;
+        }
+    }
 }
