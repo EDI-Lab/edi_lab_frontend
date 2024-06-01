@@ -19,14 +19,15 @@ export function WebsiteRouter(){
             <BrowserRouter>
                 <Routes>
                     <Route path={""} element={<Home/>}></Route>
-                    <Route path={"/member"} element={<Member/>}></Route>
-                    <Route path={"/research"} element={<Research/>}></Route>
-                    <Route path={"/join_us"} element={<JoinUs/>}></Route>
+                    <Route path={"/edi_lab_frontend"} element={<Home/>}></Route>
+                    <Route path={"/edi_lab_frontend/member"} element={<Member/>}></Route>
+                    <Route path={"/edi_lab_frontend/research"} element={<Research/>}></Route>
+                    <Route path={"/edi_lab_frontend/join_us"} element={<JoinUs/>}></Route>
                 </Routes>
-                <Link to={""} ref={homepageRef} style={{display:"none"}}></Link>
-                <Link to={"/member"} ref={memberRef} style={{display:"none"}}></Link>
-                <Link to={"/research"} ref={researchRef} style={{display:"none"}}></Link>
-                <Link to={"/join_us"} ref={joinUsRef} style={{display:"none"}}></Link>
+                <Link to={"/edi_lab_frontend"} ref={homepageRef} style={{display:"none"}}></Link>
+                <Link to={"/edi_lab_frontend/member"} ref={memberRef} style={{display:"none"}}></Link>
+                <Link to={"/edi_lab_frontend/research"} ref={researchRef} style={{display:"none"}}></Link>
+                <Link to={"/edi_lab_frontend/join_us"} ref={joinUsRef} style={{display:"none"}}></Link>
             </BrowserRouter>
 
         </>
