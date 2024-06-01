@@ -12,12 +12,17 @@ div.column{
     margin: 2vh 2vw;
     //border:1px black solid;
     flex-grow: 1;
+    font-family: "Microsoft JhengHei UI",sans-serif;
     img{
-        height: 180px;
-        width: 180px;
-        border-radius: 90px;
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
         border: 3px gray solid;
-        background: aqua;
+        object-fit: cover;
+        background: #ffffff center center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
     h1{
         font-size: 2.5em;
@@ -45,21 +50,24 @@ div.column{
     position: relative;
     div.icon{
         user-select:none;
-        height: 70px;
+        height: 50px;
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-content: center;
         justify-self: end;
         overflow: clip;
+        gap: 40px;
         img{
-            height: 50px;
-            width: 50px;
+            height: 40px;
+            width: 40px;
             transition: 0.25s all ease-in-out;
             &:hover{
                 cursor: pointer;
                 transform: scale(1.02);
             }
+            background: transparent;
+            border: none;
         }
         position: relative;
         margin-top: auto

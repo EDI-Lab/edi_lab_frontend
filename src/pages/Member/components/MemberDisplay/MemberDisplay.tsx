@@ -1,4 +1,5 @@
 import styles from "./MenuDisplay.module.less"
+
 MemberDisplay.defaultProps={
     imageUrl:"",
     name:"",
@@ -33,7 +34,7 @@ export function MemberDisplay(
         if(props.iconLinks[i].length>i) link=props.iconLinks[i]
         else link=null
         icons.push(
-            <img key={i} src={props.icons[i]} alt={"图像加载失败"} onClick={()=>{
+            <img key={i} src={props.icons[i]} alt={""} onClick={()=>{
                 if(link!=null){
                     window.open(link)
                 }

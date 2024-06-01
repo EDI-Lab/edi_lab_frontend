@@ -103,21 +103,25 @@ export function Navigation(){
                             <ul>
                                 <li className={styles.button} onClick={() => {
                                     homepageRef.current?.click()
+                                    setExpandMenu(false)
                                 }}>首页
                                 </li>
                                 <div className={styles.split}></div>
                                 <li className={styles.button} onClick={() => {
                                     memberRef.current?.click()
+                                    setExpandMenu(false)
                                 }}>成员
                                 </li>
                                 <div className={styles.split}></div>
                                 <li className={styles.button} onClick={() => {
                                     researchRef.current?.click()
+                                    setExpandMenu(false)
                                 }}>研究
                                 </li>
                                 <div className={styles.split}></div>
                                 <li className={styles.button} onClick={() => {
                                     joinUsRef.current?.click()
+                                    setExpandMenu(false)
                                 }}>加入我们
                                 </li>
                                 <div className={styles.split_line}></div>

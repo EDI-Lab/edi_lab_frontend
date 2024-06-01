@@ -10,18 +10,19 @@ export function Home() {
     }
     return (<div className={styles.home}>
 
-        <Carousel style={{height: "95vh"}} autoplay={true} autoplaySpeed={2000} arrows>
-            <div>
-                <img src={""} alt={"12131"} className={styles.img}></img>
+        <Carousel autoplay={true} autoplaySpeed={2000} arrows >
+            <div className={styles.picture}>
+
+                <img src={""} alt={""} className={styles.img}></img>
             </div>
-            <div>
-                <img src={""} alt={"121"} className={styles.img}></img>
+            <div className={styles.picture}>
+                <img src={""} alt={""} className={styles.img}></img>
             </div>
-            <div>
-                <img src={""} alt={"13121"} className={styles.img}></img>
+            <div className={styles.picture}>
+                <img src={""} alt={""} className={styles.img}></img>
             </div>
-            <div>
-                <img src={""} alt={"1213213121"} className={styles.img}></img>
+            <div className={styles.picture}>
+                <img src={""} alt={""} className={styles.img}></img>
             </div>
 
         </Carousel>
