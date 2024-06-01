@@ -8,7 +8,8 @@ export function Home() {
     for (let i = 0; i < 10; i++) {
         pictures.push(<div className={styles.picture}>111</div>)
     }
-    return (<div className={styles.home}>
+    return (
+        <div className={styles.home}>
 
         <Carousel autoplay={true} autoplaySpeed={2000} arrows >
             <div className={styles.picture}>
